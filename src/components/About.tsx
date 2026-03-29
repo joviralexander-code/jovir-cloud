@@ -80,10 +80,11 @@ export default function About() {
               <div style={{ position: "absolute", inset: "-12px", borderRadius: "50%", border: "1px solid rgba(14,165,233,0.2)" }} aria-hidden="true" />
               <div style={{ position: "absolute", inset: "-24px", borderRadius: "50%", border: "1px solid rgba(14,165,233,0.1)" }} aria-hidden="true" />
               <div
-                style={{ width: "256px", height: "256px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", border: "1px solid rgba(14,165,233,0.3)", background: "linear-gradient(135deg,rgba(3,105,161,0.2),rgba(14,165,233,0.15))", boxShadow: "0 0 60px rgba(3,105,161,0.25)", position: "relative" }}
+                style={{ width: "256px", height: "256px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", border: "1px solid rgba(14,165,233,0.3)", background: "#030712", boxShadow: "0 0 60px rgba(3,105,161,0.25)", position: "relative" }}
                 aria-hidden="true"
               >
-                <span style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "3.5rem", color: "rgba(255,255,255,0.8)", userSelect: "none" }}>JA</span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/logo.png" alt="" style={{ width: "200px", height: "auto", mixBlendMode: "screen" }} />
               </div>
               {/* Badge */}
               <div style={{ position: "absolute", bottom: "-12px", right: "-16px", background: "#1e293b", border: "1px solid #334155", borderRadius: "12px", padding: "8px 12px", boxShadow: "0 8px 24px rgba(0,0,0,0.3)" }} aria-hidden="true">
