@@ -21,6 +21,15 @@ export const metadata: Metadata = {
   description:
     "Especialista en inteligencia de negocio, automatización inteligente y soluciones data-driven para cualquier industria. Quito, Ecuador.",
   authors: [{ name: "Jovir Alexander Alvarez Delgado" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "Jovir Alvarez | Analytics & IA Aplicada al Negocio",
     description: "Transformo datos en decisiones estratégicas con Analytics e IA.",
