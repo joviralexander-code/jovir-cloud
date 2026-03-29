@@ -98,10 +98,10 @@ export default function Hero() {
       ))}
 
       {/* Content */}
-      <div style={{ position: "relative", zIndex: 10, width: "100%", maxWidth: "60rem", margin: "0 auto", padding: "8rem 1.5rem 6rem", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+      <div style={{ position: "relative", zIndex: 10, width: "100%", maxWidth: "60rem", margin: "0 auto", padding: "5rem 1.5rem 3rem", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
 
         {/* Badge */}
-        <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "6px 18px", borderRadius: "999px", border: "1px solid rgba(14,165,233,0.25)", background: "rgba(14,165,233,0.07)", marginBottom: "2rem", backdropFilter: "blur(8px)" }}>
+        <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "6px 18px", borderRadius: "999px", border: "1px solid rgba(14,165,233,0.25)", background: "rgba(14,165,233,0.07)", marginBottom: "1.25rem", backdropFilter: "blur(8px)" }}>
           <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#38bdf8", flexShrink: 0 }} className="animate-pulse" aria-hidden="true" />
           <span style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.7rem", fontWeight: 600, color: "#7dd3fc", textTransform: "uppercase", letterSpacing: "0.12em" }}>
             Quito, Ecuador · Disponible globalmente
@@ -109,7 +109,7 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 style={{ fontFamily: "var(--font-poppins)", fontWeight: 800, fontSize: "clamp(1.85rem,4vw,3rem)", lineHeight: 1.1, color: "#f8fafc", marginBottom: "1.5rem", maxWidth: "52rem" }}>
+        <h1 style={{ fontFamily: "var(--font-poppins)", fontWeight: 800, fontSize: "clamp(1.85rem,4vw,3rem)", lineHeight: 1.1, color: "#f8fafc", marginBottom: "1rem", maxWidth: "52rem" }}>
           Transformo datos en{" "}
           <span style={{ background: "linear-gradient(90deg,#38bdf8,#818cf8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
             decisiones
@@ -118,17 +118,17 @@ export default function Hero() {
         </h1>
 
         {/* Subtitle */}
-        <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.9375rem", color: "#64748b", lineHeight: 1.75, maxWidth: "38rem", marginBottom: "2.5rem" }}>
+        <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.9375rem", color: "#64748b", lineHeight: 1.75, maxWidth: "38rem", marginBottom: "1.75rem" }}>
           Especialista en inteligencia de negocio, automatización inteligente y soluciones data-driven para cualquier industria.
         </p>
 
         {/* CTAs */}
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", justifyContent: "center", marginBottom: "4rem" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", justifyContent: "center", marginBottom: "2rem" }}>
           <a
             href="https://www.linkedin.com/in/jovir-alexander-alvarez-delgado-695a61159/"
             target="_blank" rel="noopener noreferrer"
             aria-label="Conectar en LinkedIn"
-            style={{ fontFamily: "var(--font-open-sans)", fontSize: "1rem", fontWeight: 600, color: "#fff", background: "linear-gradient(135deg,#0369a1,#6366f1)", padding: "14px 32px", borderRadius: "12px", display: "inline-flex", alignItems: "center", gap: "10px", textDecoration: "none", boxShadow: "0 4px 30px rgba(14,165,233,0.3)", transition: "opacity 0.2s, transform 0.2s" }}
+            style={{ fontFamily: "var(--font-open-sans)", fontSize: "1rem", fontWeight: 600, color: "#fff", background: "linear-gradient(135deg,#0369a1,#6366f1)", padding: "11px 28px", borderRadius: "12px", display: "inline-flex", alignItems: "center", gap: "10px", textDecoration: "none", boxShadow: "0 4px 30px rgba(14,165,233,0.3)", transition: "opacity 0.2s, transform 0.2s" }}
             className="hover:opacity-90 hover:-translate-y-0.5 touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -139,7 +139,7 @@ export default function Hero() {
           </a>
           <button
             onClick={() => document.querySelector("#soluciones")?.scrollIntoView({ behavior: "smooth" })}
-            style={{ fontFamily: "var(--font-open-sans)", fontSize: "1rem", fontWeight: 600, color: "#94a3b8", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(148,163,184,0.15)", padding: "14px 32px", borderRadius: "12px", cursor: "pointer", transition: "color 0.2s, border-color 0.2s, background 0.2s", backdropFilter: "blur(8px)" }}
+            style={{ fontFamily: "var(--font-open-sans)", fontSize: "1rem", fontWeight: 600, color: "#94a3b8", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(148,163,184,0.15)", padding: "11px 28px", borderRadius: "12px", cursor: "pointer", transition: "color 0.2s, border-color 0.2s, background 0.2s", backdropFilter: "blur(8px)" }}
             className="hover:!text-white hover:!border-slate-500 hover:!bg-white/8 touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             Ver soluciones
