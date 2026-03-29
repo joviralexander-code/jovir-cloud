@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 const highlights = [
   "Líder de inteligencia de negocios en empresa multinacional",
   "Soluciones end-to-end: desde modelos de datos hasta infraestructura cloud",
-  "Experiencia en retail, fintech, salud y manufactura",
+  "Experiencia en retail, fintech y salud",
   "IA aplicada donde realmente genera valor: resultados medibles",
 ];
 
