@@ -10,8 +10,8 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-open-sans), system-ui, sans-serif;
-  background-color: #f8fafc;
-  color: #020617;
+  background-color: #030712;
+  color: #f1f5f9;
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -23,8 +23,8 @@ h1, h2, h3, h4 {
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #f8fafc; }
-::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+::-webkit-scrollbar-track { background: #030712; }
+::-webkit-scrollbar-thumb { background: #1e3a5f; border-radius: 3px; }
 :focus-visible { outline: 2px solid #0369a1; outline-offset: 3px; border-radius: 4px; }
 
 @media (prefers-reduced-motion: reduce) {

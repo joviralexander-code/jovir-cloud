@@ -29,10 +29,12 @@ export default function Services() {
     <section
       id="servicios"
       aria-labelledby="serv-h"
-      style={{ background: "#fff", padding: "96px 0", position: "relative" }}
+      style={{ background: "linear-gradient(180deg,#030712 0%,#060d1f 100%)", padding: "96px 0", position: "relative", overflow: "hidden" }}
     >
-      {/* Dot pattern */}
-      <div style={{ position: "absolute", inset: 0, opacity: 0.4, backgroundImage: "radial-gradient(circle,rgba(3,105,161,0.12) 1px,transparent 1px)", backgroundSize: "24px 24px" }} aria-hidden="true" />
+      {/* Aurora orb */}
+      <div style={{ position: "absolute", top: "10%", left: "50%", transform: "translateX(-50%)", width: "800px", height: "400px", borderRadius: "50%", background: "radial-gradient(ellipse, rgba(14,165,233,0.07) 0%, transparent 70%)", filter: "blur(60px)", pointerEvents: "none" }} aria-hidden="true" />
+      {/* Grid */}
+      <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(14,165,233,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,233,0.03) 1px,transparent 1px)", backgroundSize: "48px 48px" }} aria-hidden="true" />
 
       <div style={{ position: "relative", maxWidth: "72rem", margin: "0 auto", padding: "0 24px" }}>
         {/* Header */}
@@ -40,14 +42,14 @@ export default function Services() {
           <div style={{ width: "48px", height: "4px", borderRadius: "2px", background: "linear-gradient(90deg,#0369a1,#38bdf8)", margin: "0 auto 20px" }} aria-hidden="true" />
           <h2
             id="serv-h"
-            style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "clamp(1.75rem,3vw,2.5rem)", color: "#0f172a", marginBottom: "16px", lineHeight: 1.2 }}
+            style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "clamp(1.75rem,3vw,2.5rem)", color: "#f8fafc", marginBottom: "16px", lineHeight: 1.2 }}
           >
             Servicios que{" "}
             <span style={{ background: "linear-gradient(90deg,#0369a1,#0ea5e9)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
               generan valor
             </span>
           </h2>
-          <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "1.125rem", color: "#475569", lineHeight: 1.7 }}>
+          <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "1.125rem", color: "#64748b", lineHeight: 1.7 }}>
             Soluciones de datos e IA diseñadas para generar impacto real en los resultados de tu organización.
           </p>
         </div>
@@ -68,14 +70,15 @@ export default function Services() {
                   flexDirection: "column",
                   padding: "28px",
                   borderRadius: "16px",
-                  border: "1px solid #e2e8f0",
-                  background: "#fff",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  background: "rgba(15,23,42,0.6)",
+                  backdropFilter: "blur(12px)",
                   textDecoration: "none",
                   cursor: "pointer",
                   transition: "transform 0.2s, box-shadow 0.2s, border-color 0.2s",
                   overflow: "hidden",
                 }}
-                className="group hover:-translate-y-1 hover:shadow-xl hover:!border-slate-300 touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2"
+                className="group hover:-translate-y-1 hover:!border-sky-500/30 hover:shadow-[0_8px_32px_rgba(14,165,233,0.12)] touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
               >
                 {/* Top accent on hover */}
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "3px", borderRadius: "16px 16px 0 0", background: `linear-gradient(90deg,${s.accent},transparent)`, opacity: 0, transition: "opacity 0.2s" }} className="group-hover:!opacity-100" aria-hidden="true" />
@@ -85,20 +88,20 @@ export default function Services() {
                   <Icon size={20} style={{ color: s.accent }} />
                 </div>
 
-                <h3 style={{ fontFamily: "var(--font-poppins)", fontSize: "0.9375rem", fontWeight: 700, color: "#0f172a", marginBottom: "10px", lineHeight: 1.4 }}>{s.title}</h3>
-                <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", color: "#475569", lineHeight: 1.6, marginBottom: "20px", flexGrow: 1 }}>{s.desc}</p>
+                <h3 style={{ fontFamily: "var(--font-poppins)", fontSize: "0.9375rem", fontWeight: 700, color: "#f1f5f9", marginBottom: "10px", lineHeight: 1.4 }}>{s.title}</h3>
+                <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", color: "#64748b", lineHeight: 1.6, marginBottom: "20px", flexGrow: 1 }}>{s.desc}</p>
 
                 {/* Tags */}
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "20px" }}>
                   {s.tags.map(t => (
-                    <span key={t} style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.75rem", fontWeight: 500, color: "#475569", background: "#f1f5f9", padding: "4px 10px", borderRadius: "999px" }}>{t}</span>
+                    <span key={t} style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.75rem", fontWeight: 500, color: "#94a3b8", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)", padding: "4px 10px", borderRadius: "999px" }}>{t}</span>
                   ))}
                 </div>
 
                 {/* CTA */}
-                <div style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", fontWeight: 600, color: "#94a3b8", transition: "color 0.2s" }} className="group-hover:!text-sky-600">
+                <div style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", fontWeight: 600, color: "#94a3b8", transition: "color 0.2s" }} className="group-hover:!text-sky-400">
                   <span>Conversemos</span>
-                  <ArrowRight size={14} style={{ transition: "transform 0.2s" }} className="group-hover:translate-x-1" />
+                  <ArrowRight size={14} />
                 </div>
               </a>
             );

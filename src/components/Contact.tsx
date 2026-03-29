@@ -46,10 +46,12 @@ export default function Contact() {
     <section
       id="contacto"
       aria-labelledby="con-h"
-      style={{ background: "#f8fafc", padding: "96px 0", position: "relative" }}
+      style={{ background: "linear-gradient(180deg,#060d1f 0%,#030712 100%)", padding: "96px 0", position: "relative", overflow: "hidden" }}
     >
-      {/* Dot pattern */}
-      <div style={{ position: "absolute", inset: 0, opacity: 0.4, backgroundImage: "radial-gradient(circle,rgba(3,105,161,0.12) 1px,transparent 1px)", backgroundSize: "24px 24px" }} aria-hidden="true" />
+      {/* Aurora orb */}
+      <div style={{ position: "absolute", bottom: "10%", left: "50%", transform: "translateX(-50%)", width: "700px", height: "350px", borderRadius: "50%", background: "radial-gradient(ellipse, rgba(99,102,241,0.1) 0%, transparent 70%)", filter: "blur(60px)", pointerEvents: "none" }} aria-hidden="true" />
+      {/* Grid */}
+      <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(14,165,233,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,233,0.03) 1px,transparent 1px)", backgroundSize: "48px 48px" }} aria-hidden="true" />
 
       <div style={{ position: "relative", maxWidth: "72rem", margin: "0 auto", padding: "0 24px" }}>
         {/* Header */}
@@ -57,14 +59,14 @@ export default function Contact() {
           <div style={{ width: "48px", height: "4px", borderRadius: "2px", background: "linear-gradient(90deg,#0369a1,#38bdf8)", margin: "0 auto 20px" }} aria-hidden="true" />
           <h2
             id="con-h"
-            style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "clamp(1.75rem,3vw,2.5rem)", color: "#0f172a", marginBottom: "16px", lineHeight: 1.2 }}
+            style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "clamp(1.75rem,3vw,2.5rem)", color: "#f8fafc", marginBottom: "16px", lineHeight: 1.2 }}
           >
             ¿Tienes un proyecto{" "}
             <span style={{ background: "linear-gradient(90deg,#0369a1,#0ea5e9)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
               en mente?
             </span>
           </h2>
-          <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "1.125rem", color: "#475569", lineHeight: 1.7 }}>
+          <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "1.125rem", color: "#64748b", lineHeight: 1.7 }}>
             Estoy abierto a colaboraciones, proyectos freelance y conversaciones sobre datos, IA y tecnología.
           </p>
         </div>
@@ -89,13 +91,14 @@ export default function Contact() {
                   gap: "16px",
                   padding: "36px 28px",
                   borderRadius: "16px",
-                  border: "1px solid #e2e8f0",
-                  background: "#fff",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  background: "rgba(15,23,42,0.6)",
+                  backdropFilter: "blur(12px)",
                   textDecoration: "none",
                   overflow: "hidden",
                   transition: "transform 0.2s, box-shadow 0.2s, border-color 0.2s",
                 }}
-                className="group hover:-translate-y-1.5 hover:shadow-xl hover:!border-slate-300 touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2"
+                className="group hover:-translate-y-1.5 hover:!border-sky-500/30 hover:shadow-[0_8px_32px_rgba(14,165,233,0.12)] touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
               >
                 {/* Top accent */}
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "3px", background: `linear-gradient(90deg,${ch.accent},transparent)`, opacity: 0, transition: "opacity 0.2s" }} className="group-hover:!opacity-100" aria-hidden="true" />
@@ -107,13 +110,13 @@ export default function Contact() {
 
                 {/* Text */}
                 <div style={{ textAlign: "center" }}>
-                  <p style={{ fontFamily: "var(--font-poppins)", fontSize: "1.125rem", fontWeight: 700, color: "#0f172a", marginBottom: "4px" }}>{ch.label}</p>
+                  <p style={{ fontFamily: "var(--font-poppins)", fontSize: "1.125rem", fontWeight: 700, color: "#f1f5f9", marginBottom: "4px" }}>{ch.label}</p>
                   <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", color: "#64748b", marginBottom: "8px" }}>{ch.sub}</p>
                   <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.8rem", fontWeight: 600, color: ch.accent }}>{ch.detail}</p>
                 </div>
 
                 {/* Arrow */}
-                <div style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", fontWeight: 600, color: "#94a3b8", transition: "color 0.2s" }} className="group-hover:!text-sky-600">
+                <div style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", fontWeight: 600, color: "#475569", transition: "color 0.2s" }} className="group-hover:!text-sky-400">
                   <span>Contactar ahora</span>
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
                     <path d="M5 12h14M12 5l7 7-7 7" />
@@ -125,7 +128,7 @@ export default function Contact() {
         </div>
 
         {/* Note */}
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", marginTop: "40px", fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", color: "#94a3b8" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", marginTop: "40px", fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", color: "#475569" }}>
           <MessageCircle size={14} aria-hidden="true" />
           <span>Respondo en menos de 24 horas hábiles</span>
         </div>

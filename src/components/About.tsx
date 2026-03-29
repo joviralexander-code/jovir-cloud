@@ -21,7 +21,7 @@ export default function About() {
     <section
       id="sobre-mi"
       aria-labelledby="about-h"
-      style={{ background: "linear-gradient(160deg,#0f172a 0%,#1e293b 100%)", padding: "96px 0", position: "relative", overflow: "hidden" }}
+      style={{ background: "linear-gradient(160deg,#060d1f 0%,#0a1628 100%)", padding: "96px 0", position: "relative", overflow: "hidden" }}
     >
       {/* Grid */}
       <div style={{ position: "absolute", inset: 0, opacity: 0.3, backgroundImage: "linear-gradient(rgba(3,105,161,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(3,105,161,0.07) 1px,transparent 1px)", backgroundSize: "44px 44px" }} aria-hidden="true" />

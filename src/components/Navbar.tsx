@@ -29,8 +29,8 @@ export default function Navbar() {
           height: "56px",
           padding: "0 20px",
           borderRadius: "16px",
-          border: "1px solid rgba(148,163,184,0.15)",
-          background: "rgba(15,23,42,0.95)",
+          border: "1px solid rgba(14,165,233,0.12)",
+          background: "rgba(3,7,18,0.85)",
           backdropFilter: "blur(12px)",
           boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
         }}
@@ -86,7 +86,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div
-          style={{ maxWidth: "72rem", margin: "8px auto 0", borderRadius: "16px", border: "1px solid rgba(148,163,184,0.15)", background: "rgba(15,23,42,0.98)", backdropFilter: "blur(12px)", boxShadow: "0 8px 32px rgba(0,0,0,0.4)", overflow: "hidden" }}
+          style={{ maxWidth: "72rem", margin: "8px auto 0", borderRadius: "16px", border: "1px solid rgba(14,165,233,0.12)", background: "rgba(3,7,18,0.97)", backdropFilter: "blur(16px)", boxShadow: "0 8px 32px rgba(0,0,0,0.5)", overflow: "hidden" }}
           className="md:hidden"
         >
           <ul style={{ listStyle: "none", margin: 0, padding: "12px" }}>
