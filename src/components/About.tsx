@@ -84,7 +84,7 @@ export default function About() {
                 aria-hidden="true"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo.png" alt="" style={{ width: "200px", height: "auto", mixBlendMode: "screen" }} />
+                <img src="/avatar.png" alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
               {/* Badge */}
               <div style={{ position: "absolute", bottom: "-12px", right: "-16px", background: "#1e293b", border: "1px solid #334155", borderRadius: "12px", padding: "8px 12px", boxShadow: "0 8px 24px rgba(0,0,0,0.3)" }} aria-hidden="true">
