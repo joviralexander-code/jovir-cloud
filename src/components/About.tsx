@@ -86,11 +86,6 @@ export default function About() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/avatar.png" alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
-              {/* Badge */}
-              <div style={{ position: "absolute", bottom: "-12px", right: "-16px", background: "#1e293b", border: "1px solid #334155", borderRadius: "12px", padding: "8px 12px", boxShadow: "0 8px 24px rgba(0,0,0,0.3)" }} aria-hidden="true">
-                <p style={{ fontSize: "0.7rem", color: "#64748b", lineHeight: 1.2, marginBottom: "2px", fontFamily: "var(--font-open-sans)" }}>Rol actual</p>
-                <p style={{ fontSize: "0.875rem", fontWeight: 700, color: "#fff", lineHeight: 1.2, fontFamily: "var(--font-poppins)" }}>Líder BI &amp; Analytics</p>
-              </div>
             </div>
           </div>
 
