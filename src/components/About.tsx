@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useRef, useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 
 const highlights = [
@@ -16,7 +17,51 @@ const skills = [
   { name: "Cloud & Infraestructura",           level: 80 },
 ];
 
+function useSkillsAnimation(skills: { level: number }[]) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [widths, setWidths] = useState(skills.map(() => 0));
+  const [counts, setCounts] = useState(skills.map(() => 0));
+  const fired = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || fired.current) return;
+        fired.current = true;
+
+        // Animate bar widths after a short delay
+        setTimeout(() => setWidths(skills.map(s => s.level)), 100);
+
+        // Animate counters
+        skills.forEach((s, i) => {
+          const duration = 1200;
+          const steps = 40;
+          const increment = s.level / steps;
+          let current = 0;
+          const interval = setInterval(() => {
+            current = Math.min(current + increment, s.level);
+            setCounts(prev => {
+              const next = [...prev];
+              next[i] = Math.round(current);
+              return next;
+            });
+            if (current >= s.level) clearInterval(interval);
+          }, duration / steps);
+        });
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [skills]);
+
+  return { ref, widths, counts };
+}
+
 export default function About() {
+  const { ref, widths, counts } = useSkillsAnimation(skills);
   return (
     <section
       id="sobre-mi"
@@ -76,18 +121,18 @@ export default function About() {
             </ul>
 
             {/* Skills */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-              {skills.map(s => (
+            <div ref={ref} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+              {skills.map((s, i) => (
                 <div key={s.name}>
                   <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "6px" }}>
                     <span style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", fontWeight: 500, color: "#94a3b8" }}>{s.name}</span>
-                    <span style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.75rem", fontWeight: 600, color: "#38bdf8", fontVariantNumeric: "tabular-nums" }}>{s.level}%</span>
+                    <span style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.75rem", fontWeight: 600, color: "#38bdf8", fontVariantNumeric: "tabular-nums" }}>{counts[i]}%</span>
                   </div>
                   <div
                     style={{ height: "6px", borderRadius: "3px", background: "#1e293b", overflow: "hidden" }}
                     role="progressbar" aria-valuenow={s.level} aria-valuemin={0} aria-valuemax={100} aria-label={s.name}
                   >
-                    <div style={{ height: "100%", width: `${s.level}%`, borderRadius: "3px", background: "linear-gradient(90deg,#0369a1,#38bdf8)" }} />
+                    <div style={{ height: "100%", width: `${widths[i]}%`, borderRadius: "3px", background: "linear-gradient(90deg,#0369a1,#38bdf8)", transition: `width 1.2s cubic-bezier(0.4,0,0.2,1) ${i * 120}ms` }} />
                   </div>
                 </div>
               ))}
