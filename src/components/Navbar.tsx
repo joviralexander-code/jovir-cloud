@@ -44,7 +44,7 @@ export default function Navbar() {
           className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-lg"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.png" alt="Jovir.cloud" style={{ height: "64px", width: "auto", mixBlendMode: "screen" }} />
+          <img src="/logo.png" alt="Jovir.cloud" style={{ height: "80px", width: "auto", mixBlendMode: "screen" }} />
         </button>
 
         {/* Desktop links */}
