@@ -109,7 +109,7 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 style={{ fontFamily: "var(--font-poppins)", fontWeight: 800, fontSize: "clamp(2.4rem,5.5vw,4.2rem)", lineHeight: 1.1, color: "#f8fafc", marginBottom: "1.5rem", maxWidth: "52rem" }}>
+        <h1 style={{ fontFamily: "var(--font-poppins)", fontWeight: 800, fontSize: "clamp(1.85rem,4vw,3rem)", lineHeight: 1.1, color: "#f8fafc", marginBottom: "1.5rem", maxWidth: "52rem" }}>
           Transformo datos en{" "}
           <span style={{ background: "linear-gradient(90deg,#38bdf8,#818cf8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
             decisiones
@@ -118,7 +118,7 @@ export default function Hero() {
         </h1>
 
         {/* Subtitle */}
-        <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "1.125rem", color: "#64748b", lineHeight: 1.75, maxWidth: "38rem", marginBottom: "2.5rem" }}>
+        <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.9375rem", color: "#64748b", lineHeight: 1.75, maxWidth: "38rem", marginBottom: "2.5rem" }}>
           Especialista en inteligencia de negocio, automatización inteligente y soluciones data-driven para cualquier industria.
         </p>
 
@@ -138,11 +138,11 @@ export default function Hero() {
             Conectemos en LinkedIn
           </a>
           <button
-            onClick={() => document.querySelector("#servicios")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.querySelector("#soluciones")?.scrollIntoView({ behavior: "smooth" })}
             style={{ fontFamily: "var(--font-open-sans)", fontSize: "1rem", fontWeight: 600, color: "#94a3b8", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(148,163,184,0.15)", padding: "14px 32px", borderRadius: "12px", cursor: "pointer", transition: "color 0.2s, border-color 0.2s, background 0.2s", backdropFilter: "blur(8px)" }}
             className="hover:!text-white hover:!border-slate-500 hover:!bg-white/8 touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
-            Ver servicios
+            Ver soluciones
           </button>
         </div>
 
@@ -154,7 +154,7 @@ export default function Hero() {
             { v: "100%", l: "enfoque en resultados" },
           ].map(s => (
             <div key={s.l} style={{ textAlign: "center" }}>
-              <p style={{ fontFamily: "var(--font-poppins)", fontSize: "2.25rem", fontWeight: 700, lineHeight: 1, marginBottom: "4px", background: "linear-gradient(90deg,#f8fafc,#94a3b8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", fontVariantNumeric: "tabular-nums" }}>{s.v}</p>
+              <p style={{ fontFamily: "var(--font-poppins)", fontSize: "1.75rem", fontWeight: 700, lineHeight: 1, marginBottom: "4px", background: "linear-gradient(90deg,#f8fafc,#94a3b8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", fontVariantNumeric: "tabular-nums" }}>{s.v}</p>
               <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.8rem", color: "#475569", textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.l}</p>
             </div>
           ))}
@@ -163,7 +163,7 @@ export default function Hero() {
 
       {/* Scroll */}
       <button
-        onClick={() => document.querySelector("#servicios")?.scrollIntoView({ behavior: "smooth" })}
+        onClick={() => document.querySelector("#soluciones")?.scrollIntoView({ behavior: "smooth" })}
         style={{ position: "absolute", bottom: "32px", left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: "6px", color: "#334155", background: "none", border: "none", cursor: "pointer", minHeight: "44px", minWidth: "44px", justifyContent: "flex-end", transition: "color 0.2s" }}
         aria-label="Siguiente sección"
         className="hover:!text-slate-400 touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 rounded"

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { label: "Servicios", href: "#servicios" },
+  { label: "Soluciones", href: "#soluciones" },
   { label: "Sobre mí",  href: "#sobre-mi" },
   { label: "Contacto",  href: "#contacto" },
 ];

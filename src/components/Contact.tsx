@@ -59,14 +59,14 @@ export default function Contact() {
           <div style={{ width: "48px", height: "4px", borderRadius: "2px", background: "linear-gradient(90deg,#0369a1,#38bdf8)", margin: "0 auto 20px" }} aria-hidden="true" />
           <h2
             id="con-h"
-            style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "clamp(1.75rem,3vw,2.5rem)", color: "#f8fafc", marginBottom: "16px", lineHeight: 1.2 }}
+            style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "clamp(1.4rem,2.5vw,2rem)", color: "#f8fafc", marginBottom: "16px", lineHeight: 1.2 }}
           >
             ¿Tienes un proyecto{" "}
             <span style={{ background: "linear-gradient(90deg,#0369a1,#0ea5e9)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
               en mente?
             </span>
           </h2>
-          <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "1.125rem", color: "#64748b", lineHeight: 1.7 }}>
+          <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.9375rem", color: "#64748b", lineHeight: 1.7 }}>
             Estoy abierto a colaboraciones, proyectos freelance y conversaciones sobre datos, IA y tecnología.
           </p>
         </div>
@@ -110,7 +110,7 @@ export default function Contact() {
 
                 {/* Text */}
                 <div style={{ textAlign: "center" }}>
-                  <p style={{ fontFamily: "var(--font-poppins)", fontSize: "1.125rem", fontWeight: 700, color: "#f1f5f9", marginBottom: "4px" }}>{ch.label}</p>
+                  <p style={{ fontFamily: "var(--font-poppins)", fontSize: "1rem", fontWeight: 700, color: "#f1f5f9", marginBottom: "4px" }}>{ch.label}</p>
                   <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", color: "#64748b", marginBottom: "8px" }}>{ch.sub}</p>
                   <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.8rem", fontWeight: 600, color: ch.accent }}>{ch.detail}</p>
                 </div>

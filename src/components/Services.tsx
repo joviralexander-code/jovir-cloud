@@ -27,7 +27,7 @@ export default function Services() {
 
   return (
     <section
-      id="servicios"
+      id="soluciones"
       aria-labelledby="serv-h"
       style={{ background: "linear-gradient(180deg,#030712 0%,#060d1f 100%)", padding: "96px 0", position: "relative", overflow: "hidden" }}
     >
@@ -42,14 +42,14 @@ export default function Services() {
           <div style={{ width: "48px", height: "4px", borderRadius: "2px", background: "linear-gradient(90deg,#0369a1,#38bdf8)", margin: "0 auto 20px" }} aria-hidden="true" />
           <h2
             id="serv-h"
-            style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "clamp(1.75rem,3vw,2.5rem)", color: "#f8fafc", marginBottom: "16px", lineHeight: 1.2 }}
+            style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "clamp(1.4rem,2.5vw,2rem)", color: "#f8fafc", marginBottom: "16px", lineHeight: 1.2 }}
           >
-            Servicios que{" "}
-            <span style={{ background: "linear-gradient(90deg,#0369a1,#0ea5e9)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+            Soluciones que{" "}
+            <span style={{ background: "linear-gradient(90deg,#38bdf8,#818cf8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
               generan valor
             </span>
           </h2>
-          <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "1.125rem", color: "#64748b", lineHeight: 1.7 }}>
+          <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.9375rem", color: "#64748b", lineHeight: 1.7 }}>
             Soluciones de datos e IA diseñadas para generar impacto real en los resultados de tu organización.
           </p>
         </div>

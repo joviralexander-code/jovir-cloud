@@ -38,7 +38,7 @@ export default function About() {
                 style={{ width: "256px", height: "256px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", border: "1px solid rgba(14,165,233,0.3)", background: "linear-gradient(135deg,rgba(3,105,161,0.2),rgba(14,165,233,0.15))", boxShadow: "0 0 60px rgba(3,105,161,0.25)", position: "relative" }}
                 aria-hidden="true"
               >
-                <span style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "4.5rem", color: "rgba(255,255,255,0.8)", userSelect: "none" }}>JA</span>
+                <span style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "3.5rem", color: "rgba(255,255,255,0.8)", userSelect: "none" }}>JA</span>
               </div>
               {/* Badge */}
               <div style={{ position: "absolute", bottom: "-12px", right: "-16px", background: "#1e293b", border: "1px solid #334155", borderRadius: "12px", padding: "8px 12px", boxShadow: "0 8px 24px rgba(0,0,0,0.3)" }} aria-hidden="true">
@@ -53,7 +53,7 @@ export default function About() {
             <div style={{ width: "48px", height: "4px", borderRadius: "2px", background: "linear-gradient(90deg,#0369a1,#38bdf8)", marginBottom: "20px" }} aria-hidden="true" />
             <h2
               id="about-h"
-              style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "clamp(1.75rem,3vw,2.5rem)", color: "#fff", marginBottom: "24px", lineHeight: 1.2 }}
+              style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "clamp(1.4rem,2.5vw,2rem)", color: "#fff", marginBottom: "24px", lineHeight: 1.2 }}
             >
               Datos que hablan{" "}
               <span style={{ background: "linear-gradient(90deg,#38bdf8,#0369a1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
@@ -61,7 +61,7 @@ export default function About() {
               </span>
             </h2>
 
-            <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "1.0625rem", color: "#94a3b8", lineHeight: 1.7, marginBottom: "32px" }}>
+            <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.9375rem", color: "#94a3b8", lineHeight: 1.7, marginBottom: "32px" }}>
               Soy Jovir Alvarez, especialista en Analytics e IA con base en Quito, Ecuador. Mi trabajo vive en la intersección entre los datos, la tecnología y la estrategia.
             </p>
 
