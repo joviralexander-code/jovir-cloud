@@ -39,12 +39,12 @@ export default function Navbar() {
         {/* Logo */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: "1px", padding: "4px" }}
+          style={{ background: "none", border: "none", cursor: "pointer", padding: "4px", display: "flex", alignItems: "center" }}
           aria-label="Inicio"
           className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-lg"
         >
-          <span style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "1.125rem", color: "#fff" }}>Jovir</span>
-          <span style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "1.125rem", background: "linear-gradient(90deg,#38bdf8,#0ea5e9)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>.cloud</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.png" alt="Jovir.cloud" style={{ height: "36px", width: "auto", mixBlendMode: "screen" }} />
         </button>
 
         {/* Desktop links */}
