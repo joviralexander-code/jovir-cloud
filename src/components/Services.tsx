@@ -26,27 +26,34 @@ export default function Services() {
   };
 
   return (
-    <section id="servicios" className="py-24 bg-white relative" aria-labelledby="serv-h">
-      {/* Subtle dot pattern */}
-      <div className="absolute inset-0 opacity-40" style={{ backgroundImage: "radial-gradient(circle,rgba(3,105,161,0.12) 1px,transparent 1px)", backgroundSize: "24px 24px" }} aria-hidden="true" />
+    <section
+      id="servicios"
+      aria-labelledby="serv-h"
+      style={{ background: "#fff", padding: "96px 0", position: "relative" }}
+    >
+      {/* Dot pattern */}
+      <div style={{ position: "absolute", inset: 0, opacity: 0.4, backgroundImage: "radial-gradient(circle,rgba(3,105,161,0.12) 1px,transparent 1px)", backgroundSize: "24px 24px" }} aria-hidden="true" />
 
-      <div className="relative max-w-6xl mx-auto px-6">
+      <div style={{ position: "relative", maxWidth: "72rem", margin: "0 auto", padding: "0 24px" }}>
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-block w-12 h-1 rounded-full mb-5" style={{ background: "linear-gradient(90deg,#0369a1,#38bdf8)" }} aria-hidden="true" />
-          <h2 id="serv-h" className="text-4xl font-bold text-slate-900 mb-4" style={{ fontFamily: "var(--font-poppins)" }}>
+        <div style={{ textAlign: "center", maxWidth: "40rem", margin: "0 auto 64px" }}>
+          <div style={{ width: "48px", height: "4px", borderRadius: "2px", background: "linear-gradient(90deg,#0369a1,#38bdf8)", margin: "0 auto 20px" }} aria-hidden="true" />
+          <h2
+            id="serv-h"
+            style={{ fontFamily: "var(--font-poppins)", fontWeight: 700, fontSize: "clamp(1.75rem,3vw,2.5rem)", color: "#0f172a", marginBottom: "16px", lineHeight: 1.2 }}
+          >
             Servicios que{" "}
             <span style={{ background: "linear-gradient(90deg,#0369a1,#0ea5e9)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
               generan valor
             </span>
           </h2>
-          <p className="text-lg text-slate-600 leading-relaxed" style={{ fontFamily: "var(--font-open-sans)" }}>
+          <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "1.125rem", color: "#475569", lineHeight: 1.7 }}>
             Soluciones de datos e IA diseñadas para generar impacto real en los resultados de tu organización.
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Cards grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: "24px" }}>
           {services.map(s => {
             const Icon = s.icon;
             return (
@@ -54,32 +61,44 @@ export default function Services() {
                 key={s.title}
                 href="#contacto"
                 onClick={go}
-                className="group relative p-7 rounded-2xl border border-slate-200 bg-white no-underline cursor-pointer transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-slate-300 touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2"
                 aria-label={s.title}
+                style={{
+                  position: "relative",
+                  display: "flex",
+                  flexDirection: "column",
+                  padding: "28px",
+                  borderRadius: "16px",
+                  border: "1px solid #e2e8f0",
+                  background: "#fff",
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  transition: "transform 0.2s, box-shadow 0.2s, border-color 0.2s",
+                  overflow: "hidden",
+                }}
+                className="group hover:-translate-y-1 hover:shadow-xl hover:!border-slate-300 touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2"
               >
-                {/* Colored top border on hover */}
-                <div className="absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                  style={{ background: `linear-gradient(90deg,${s.accent},transparent)` }} aria-hidden="true" />
+                {/* Top accent on hover */}
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "3px", borderRadius: "16px 16px 0 0", background: `linear-gradient(90deg,${s.accent},transparent)`, opacity: 0, transition: "opacity 0.2s" }} className="group-hover:!opacity-100" aria-hidden="true" />
 
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 transition-transform duration-200 group-hover:scale-110"
-                  style={{ background: `${s.accent}15` }} aria-hidden="true">
+                {/* Icon */}
+                <div style={{ width: "44px", height: "44px", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", background: `${s.accent}15`, marginBottom: "20px", transition: "transform 0.2s" }} className="group-hover:scale-110" aria-hidden="true">
                   <Icon size={20} style={{ color: s.accent }} />
                 </div>
 
-                <h3 className="text-base font-bold text-slate-900 mb-3 leading-snug" style={{ fontFamily: "var(--font-poppins)" }}>{s.title}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed mb-5" style={{ fontFamily: "var(--font-open-sans)" }}>{s.desc}</p>
+                <h3 style={{ fontFamily: "var(--font-poppins)", fontSize: "0.9375rem", fontWeight: 700, color: "#0f172a", marginBottom: "10px", lineHeight: 1.4 }}>{s.title}</h3>
+                <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", color: "#475569", lineHeight: 1.6, marginBottom: "20px", flexGrow: 1 }}>{s.desc}</p>
 
-                <div className="flex flex-wrap gap-2 mb-5">
+                {/* Tags */}
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "20px" }}>
                   {s.tags.map(t => (
-                    <span key={t} className="px-2.5 py-1 rounded-full text-xs font-medium text-slate-600 bg-slate-100"
-                      style={{ fontFamily: "var(--font-open-sans)" }}>{t}</span>
+                    <span key={t} style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.75rem", fontWeight: 500, color: "#475569", background: "#f1f5f9", padding: "4px 10px", borderRadius: "999px" }}>{t}</span>
                   ))}
                 </div>
 
-                <div className="flex items-center gap-1.5 text-sm font-semibold text-slate-400 group-hover:text-sky-600 transition-colors"
-                  style={{ fontFamily: "var(--font-open-sans)" }}>
+                {/* CTA */}
+                <div style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", fontWeight: 600, color: "#94a3b8", transition: "color 0.2s" }} className="group-hover:!text-sky-600">
                   <span>Conversemos</span>
-                  <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-1" />
+                  <ArrowRight size={14} style={{ transition: "transform 0.2s" }} className="group-hover:translate-x-1" />
                 </div>
               </a>
             );
