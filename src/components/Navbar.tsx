@@ -1,18 +1,31 @@
 "use client";
 import { useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const links = [
   { label: "Soluciones", href: "#soluciones" },
   { label: "Sobre mí",  href: "#sobre-mi" },
   { label: "Contacto",  href: "#contacto" },
+  { label: "Privacidad", href: "/privacidad" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  const router = useRouter();
+  const pathname = usePathname();
+
   const go = (href: string) => {
     setOpen(false);
+    if (href.startsWith("/")) {
+      router.push(href);
+      return;
+    }
+    if (pathname !== "/") {
+      router.push("/" + href);
+      return;
+    }
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
 
