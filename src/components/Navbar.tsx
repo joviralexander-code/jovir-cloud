@@ -62,15 +62,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTA */}
-        <button
-          onClick={() => go("#contacto")}
-          style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", fontWeight: 600, color: "#fff", background: "linear-gradient(135deg,#0369a1,#0ea5e9)", border: "none", cursor: "pointer", padding: "8px 20px", borderRadius: "10px", minHeight: "44px", transition: "opacity 0.2s" }}
-          className="hidden md:block hover:opacity-90 touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
-        >
-          Hablemos
-        </button>
-
         {/* Hamburger */}
         <button
           onClick={() => setOpen(!open)}
@@ -101,15 +92,6 @@ export default function Navbar() {
                 </button>
               </li>
             ))}
-            <li style={{ paddingTop: "8px" }}>
-              <button
-                onClick={() => go("#contacto")}
-                style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.875rem", fontWeight: 600, color: "#fff", background: "linear-gradient(135deg,#0369a1,#0ea5e9)", border: "none", cursor: "pointer", padding: "12px 16px", borderRadius: "10px", minHeight: "44px", width: "100%" }}
-                className="touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
-              >
-                Hablemos
-              </button>
-            </li>
           </ul>
         </div>
       )}

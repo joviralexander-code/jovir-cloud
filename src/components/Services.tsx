@@ -1,5 +1,5 @@
 "use client";
-import { BarChart3, TrendingUp, Bot, Code2, Server, ArrowRight } from "lucide-react";
+import { BarChart3, TrendingUp, Bot, Code2, Server, ArrowRight, LineChart } from "lucide-react";
 
 const services = [
   { icon: BarChart3, title: "Business Intelligence & Analytics",
@@ -17,6 +17,9 @@ const services = [
   { icon: Server, title: "Infraestructura Cloud & Self-Hosted",
     desc: "Despliegue y administración de servidores, plataformas PaaS, DNS/CDN y reverse proxies. Control total del stack.",
     tags: ["Coolify", "Nginx", "VPS", "CI/CD"], accent: "#dc2626" },
+  { icon: LineChart, title: "Consultoría en Estrategia de Datos",
+    desc: "Diagnóstico del estado de datos de tu organización, hoja de ruta hacia la madurez analítica y acompañamiento en la toma de decisiones basada en datos.",
+    tags: ["Data Strategy", "Roadmap", "Governance", "KPIs"], accent: "#0891b2" },
 ];
 
 export default function Services() {
