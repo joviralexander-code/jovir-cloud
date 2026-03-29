@@ -7,7 +7,7 @@ export default function Footer() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/logo.png" alt="Jovir.cloud" style={{ height: "70px", width: "auto", mixBlendMode: "screen" }} />
         <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.75rem", color: "#334155" }} suppressHydrationWarning>
-          © {new Date().getFullYear()} Jovir Alvarez · Analytics &amp; IA Aplicada al Negocio · Quito, Ecuador
+          © {new Date().getFullYear()} &nbsp; Jovir Alvarez &nbsp;·&nbsp; Analytics &amp; IA Aplicada al Negocio &nbsp;·&nbsp; Quito, Ecuador
         </p>
       </div>
     </footer>
