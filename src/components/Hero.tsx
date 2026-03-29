@@ -146,19 +146,6 @@ export default function Hero() {
           </button>
         </div>
 
-        {/* Stats */}
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "3rem", justifyContent: "center", paddingTop: "2rem", borderTop: "1px solid rgba(148,163,184,0.08)", width: "100%" }}>
-          {[
-            { v: "8+", l: "años de experiencia" },
-            { v: "50+", l: "proyectos entregados" },
-            { v: "100%", l: "enfoque en resultados" },
-          ].map(s => (
-            <div key={s.l} style={{ textAlign: "center" }}>
-              <p style={{ fontFamily: "var(--font-poppins)", fontSize: "1.75rem", fontWeight: 700, lineHeight: 1, marginBottom: "4px", background: "linear-gradient(90deg,#f8fafc,#94a3b8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", fontVariantNumeric: "tabular-nums" }}>{s.v}</p>
-              <p style={{ fontFamily: "var(--font-open-sans)", fontSize: "0.8rem", color: "#475569", textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.l}</p>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* Scroll */}
